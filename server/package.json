@@ -1,0 +1,19 @@
+{
+  "name": "persona-server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js && json-server --watch db.json --port 3001",
+    "create": "cd utils && node csv2json.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
+}

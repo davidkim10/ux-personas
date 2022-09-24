@@ -1,0 +1,35 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "overview side"
+    "overview side2"
+    "overview side3";
+  grid-template-columns: 400px minmax(350px, 450px);
+  grid-gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+header {
+  grid-area: header;
+}
+
+.overview {
+  grid-area: overview;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .layout {
+    padding: 1rem;
+  }
+}

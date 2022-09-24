@@ -1,0 +1,28 @@
+.overview__img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  border: solid 0.5rem #eee;
+  grid-area: "main";
+}
+
+.overview__title {
+  //   text-transform: uppercase;
+}
+
+.overview__hobbies {
+  align-items: center;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  max-width: 400px;
+  padding: 2rem;
+
+  .badge {
+    margin: 0.25rem;
+  }
+}

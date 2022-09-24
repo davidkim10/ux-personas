@@ -1,0 +1,17 @@
+.content-card {
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem;
+  overflow-x: auto;
+  overflow-y: visible;
+  min-width: 0;
+}
+
+@media (max-width: 576px) {
+  .content-card {
+    padding: 1.5rem;
+  }
+}

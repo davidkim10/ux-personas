@@ -1,0 +1,19 @@
+.list {
+  padding-left: 0;
+}
+
+.list-item {
+  border-bottom: dotted 1px #eee;
+  list-style-type: none;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.8em;
+}
+
+.list-item--alt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-item__label {
+  font-weight: bold;
+}
