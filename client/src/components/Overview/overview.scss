@@ -7,22 +7,17 @@
   grid-area: "main";
 }
 
-.overview__title {
-  //   text-transform: uppercase;
-}
-
 .overview__hobbies {
   align-items: center;
   background-color: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
   margin-top: 3rem;
-  max-width: 400px;
+  margin: auto;
+  max-width: 100%;
+  overflow: auto;
   padding: 2rem;
-
-  .badge {
-    margin: 0.25rem;
-  }
+  width: 100%;
+  gap: 0.5rem 0.25rem;
 }
