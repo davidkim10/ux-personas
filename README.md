@@ -26,3 +26,7 @@ Create quick and simple user personas with the following data points:
 ## Screenshot
 
 ![alt text for screen readers](/client/public/preview.png "persona generator preview")
+
+## Preview
+
+![alt text for screen readers](/client/public/preview.gif "persona preview gif")
