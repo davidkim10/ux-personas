@@ -4,7 +4,7 @@ const utils = new Utils();
 class Users {
   constructor(csv) {
     this.csv = csv;
-    this.initialize();
+    this._initialize();
   }
 
   get userDataKeys() {
@@ -23,22 +23,7 @@ class Users {
     return this._users;
   }
 
-  parseUserDataKeys() {
-    return this.data?.slice(0, 1)?.flatMap((item) => item);
-  }
-
-  parseUserData() {
-    return this.data.slice(1);
-  }
-
-  transformCSV() {
-    return this.csv
-      .trim()
-      .split("\r")
-      .map((line) => line.replace("\n", "").split(","));
-  }
-
-  createUser(id, userData) {
+  _createUser(id, userData) {
     const quantity_hobbies = Utils.minMax(8, 12);
     const quantity_social = Utils.minMax(2, 8);
     const hobbies = utils.getHobbies(quantity_hobbies);
@@ -57,15 +42,30 @@ class Users {
     return { ...user, degrees, hobbies, socialMedia };
   }
 
-  createUsers() {
-    return this.userData.map((user, i) => this.createUser(i + 1, user));
+  _createUsers() {
+    return this.userData.map((user, i) => this._createUser(i + 1, user));
   }
 
-  initialize() {
-    this._data = this.transformCSV();
-    this._userDataKeys = this.parseUserDataKeys();
-    this._userData = this.parseUserData();
-    this._users = this.createUsers();
+  _parseUserDataKeys() {
+    return this.data?.slice(0, 1)?.flatMap((item) => item);
+  }
+
+  _parseUserData() {
+    return this.data.slice(1);
+  }
+
+  _transformCSV() {
+    return this.csv
+      .trim()
+      .split("\r")
+      .map((line) => line.replace("\n", "").split(","));
+  }
+
+  _initialize() {
+    this._data = this._transformCSV();
+    this._userDataKeys = this._parseUserDataKeys();
+    this._userData = this._parseUserData();
+    this._users = this._createUsers();
   }
 }
 
