@@ -23,10 +23,6 @@ class Users {
     return this._users;
   }
 
-  minMax(min, max) {
-    return Math.max(Math.floor(Math.random() * max), min);
-  }
-
   parseUserDataKeys() {
     return this.data?.slice(0, 1)?.flatMap((item) => item);
   }
@@ -43,8 +39,8 @@ class Users {
   }
 
   createUser(id, userData) {
-    const quantity_hobbies = this.minMax(8, 12);
-    const quantity_social = this.minMax(2, 8);
+    const quantity_hobbies = Utils.minMax(8, 12);
+    const quantity_social = Utils.minMax(2, 8);
     const hobbies = utils.getHobbies(quantity_hobbies);
     const socialMedia = utils.getSocial(quantity_social);
     const degrees = utils.getDegrees();

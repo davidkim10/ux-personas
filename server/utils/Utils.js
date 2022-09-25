@@ -8,6 +8,10 @@ class Utils {
     this._social = getSocialMedia();
   }
 
+  static minMax(min, max) {
+    return Math.max(Math.floor(Math.random() * max), min);
+  }
+
   getHobbies = (quantity) => {
     return this.randomSort(this._hobbies, quantity);
   };
