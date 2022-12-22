@@ -1,6 +1,6 @@
 # Persona Generator
 
-Persona generator application made with NodeJS and a React front-end. Utilized json-server to quickly scale a Node backend. This web application allows for UX teams to quickly generate and visualize user personas to better understand their customers.
+Persona generator application made with NodeJS and a React front-end. Utilized json-server to quickly scale a Node backend. This web application allows for UX teams to quickly generate and visualize user personas to better understand their customers. This application reads from a CSV file so the data can easily be replaced by anyone with knowledge of excel and/or any spreadsheet software.
 
 Create quick and simple user personas with the following data points:
 
